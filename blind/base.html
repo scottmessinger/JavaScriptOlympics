@@ -16,9 +16,12 @@
              * In action: http://screencast.com/t/ZDYwZGYyZ
              */
             $(document).ready(function(){
+              $('#submit').click(function(){
+                    $('#list').append('<li>'+$('#box').val()+'</li>');
+                  })
                 
                 
-                
+              
             });
         </script>
 	</head>
@@ -29,12 +32,12 @@
         text that is inserted into the list based on the status of the <br/>
         checkbox.</p>
         <p>In action: <a href="http://screencast.com/t/ZDYwZGYyZ">http://screencast.com/t/ZDYwZGYyZ</a></p>
-	    <form>
-	        <input type="text" name="mytext">
+	    <form id='form'>
+  	        <input type="text" name="mytext" id='box'>
             <input type="checkbox" name="upper">
-            <input type="button" name="doit" value="Add">
+            <input type="button" name="doit" value="Add" id="submit">
 	    </form>
-        <ul>
+        <ul id='list'>
             
         </ul>
 	</body>
