@@ -17,9 +17,32 @@
              */
             $(document).ready(function(){
               $('#submit').click(function(){
-                    $('#list').append('<li>'+$('#box').val()+'</li>');
+                    var text = $('#box').val();
+                    if($('#check').is(':checked')){
+                      text = text.toUpperCase();                      
+                    }
+                    $('#list').append('<li>'+text+'</li>');
                   })
                 
+                  // var i = 0;
+                  // for( i=0;i<=10;i++){
+                  //   $('.alphabet').append('<div>'+a.charAt(i)+'</div>')
+                  // }         
+                  // $('.alphabet').append(br)
+                  // 
+                  // var i = 10;
+                  // for( i=11;i<=20;i++){
+                  //   $('.alphabet').append('<div>'+a.charAt(i)+'</div>')
+                  // }        
+                  // $('.alphabet').append(br)
+                  //  
+                  // var i = 20;
+                  // for( i=21;i<=26;i++){
+                  //   $('.alphabet').append('<div>'+a.charAt(i)+'</div>')
+                  // }         
+                  // 
+                  // var o = 0
+                  // var i = 0
                 
               
             });
@@ -34,7 +57,7 @@
         <p>In action: <a href="http://screencast.com/t/ZDYwZGYyZ">http://screencast.com/t/ZDYwZGYyZ</a></p>
 	    <form id='form'>
   	        <input type="text" name="mytext" id='box'>
-            <input type="checkbox" name="upper">
+            <input type="checkbox" name="upper" id='check'>
             <input type="button" name="doit" value="Add" id="submit">
 	    </form>
         <ul id='list'>
